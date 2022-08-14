@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/73525b73cb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>My Advanced CSS: Portfolio</title>
@@ -11,62 +12,51 @@
 
 <body>
     <!-- - - HEADER - - -->
-    <header>
-    <!-- name & photo/avatar -->
-    <h1>
-        Clarence Marie Go
-    </h1>
-    <!-- navigation to about them, their work, and contact info  -->
-    <div class="navigation-bar">
+    <header class="header-left">
+    <div class="sidebar">
+        <!-- - - AVATAR + NAME - - -->   
+        <a href="index.html" class="logo">
+            <img src="./assets/images/its_me.jpg" alt="an icon photo of Clarence Go">
+        </a>
+        <a href="index.html" class="site-title">
+            Clarence Go
+        </a>
+        <!-- navigation to about them, their work, and contact info  -->
         <nav>
             <ul class="nav-menu-vertical">
-                <!-- - HOME - -->
-                <!-- what does active do? -->
-                <a href="#home" class="nav-link active">
-                    <!-- ::before -->
-                    <i class="icon-home">
-                        <!-- ::before -->
-                    </i>
-                    "Home"
+                <a href="#home" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    Home
                 </a>
-                <!-- ABOUT ME -->
+                <br>
                 <a href="#aboutme" class="nav-link">
-                    <!-- ::before -->
-                    <i class="icon-me">
-                        <!-- ::before -->
-                    </i>
-                    "About Me"
+                    <i class="fa-solid fa-user"></i>
+                    About Me
                 </a>
-                <!-- MY SKILLS -->
+                <br>
                 <a href="#skills" class="nav-link">
-                    <!-- ::before -->
-                    <i class="icon-skills">
-                        <!-- ::before -->
-                    </i>
-                    "My Skills"
+                    <i class="fa-solid fa-pencil"></i>
+                    My Skills
                 </a>
-                <!-- MY WORKS -->
+                <br>
                 <a href="#myworks" class="nav-link">
-                    <!-- ::before -->
-                    <i class="icon-works">
-                        <!-- ::before -->
-                    </i>
-                    "My Works"
+                    <i class="fa-solid fa-folder"></i>
+                    My Works
                 </a>
+                <br>
                 <!-- GALLERY OF WORKS -->
                 <a href="#gallery" class="nav-link">
-                    <i class="icon-gallery">
+                    <i class="fa-solid fa-images"></i>
                         <!-- ::before -->
                     </i>
-                    "My Gallery"
+                    My Gallery
                 </a>
+                <br>
                 <!-- CONTACT INFO + FORM -->
                 <a href="#contact" class="nav-link">
-                    <!-- ::before -->
-                    <i class="icon-contact">
-                        <!-- ::before -->
+                    <i class="fa-solid fa-address-card"></i>
                     </i>
-                    "Contact Me"
+                    Contact Me
                 </a>
             </ul>
         </nav>
@@ -74,12 +64,32 @@
             <ul class="social-icons">
                 <li class="list-inline-items">
                     <a href="#">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-items">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-items">
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-items">
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="github-icon"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-twitch"></i>
                     </a>
                 </li>
             </ul>
@@ -87,5 +97,50 @@
     </div>
     <!-- CSS: navigation should scroll to the corresponding section when clicked on -->
     </header>
+    <!-- - - MAIN CONTENT - - -->
+    <main class="main-content">
+        <!-- HOME + ABOUT ME -->
+        <section class="hero">
+            <div id="aboutme" class="card-about">
+                <h1>
+                    Hello there,
+                </h1>
+                <p>
+                    I am Claire! 
+                    I am 24 years old studying nursing and web development. 
+                    I have minimal experience in web design and development, but I have experience in doing graphic arts commisions and customizations.
+                </p>
+                <br>
+                <!-- COLUMNS AT THE BOTTOM -->
+                <div class="row-pers-info">
+                    <div class="col-info">
+                        <p>
+                            <span class="info-title">Name:</span>
+                            Clarence Marie Go
+                        </p>
+                        <p>
+                            <span class="info-title">Birthday:</span>
+                            September 23, 1997
+                        </p>
+                    </div>
+                    <div class="col-info">
+                        <p>
+                            <span class="info-title">Location:</span>
+                            New Jersey, USA
+                        </p>
+                        <p>
+                            <span class="info-title">Email:</span>
+                            puppy@lukabear.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </section>
+        <!-- MY SKILLS -->
+        <!-- MY WORKS -->
+        <!-- MY GALLERY -->
+        <!-- CONTACT ME -->
+    </main>
 </body>
 </html>
