@@ -1,46 +1,49 @@
+/* --------------- ROOT VARIABLES --------------- */
 :root {
-    --background-color: linear-gradient(rgb(229, 174, 200), rgb(236, 193, 201), rgb(242, 211, 201), rgb(248, 230, 201), rgb(254, 249, 201));
+    --lightorchid-pipi: linear-gradient(rgb(229, 174, 200), rgb(236, 193, 201), rgb(242, 211, 201), rgb(248, 230, 201), rgb(254, 249, 201));
     --spindle: #c8d6ef;
     --cadillac: #b34b5e;
-    --dairy-cream: #f9e1c0;
+    --shadow-cadillac: 0px 6px 15px 0px rgb(179,75,94, 0.3);
     --japanese-laurel: #076605;
-    --careys-pink: #ca9cac;
     --ebony-clay: #2d3045;
-    --beeswax: #fef5bf;
-    --cornflower-blue: #5ca5f9;
+    --shadow-ebonyclay: 0px 6px 15px 0px rgb(43,42,63, 0.3)
 }
 
-/* --- ------------ --- */
-/* -    TYPOGRAPHY    - */
-/* --- ------------ --- */
+/* --------------- TYPOGRAPHY --------------- */
 h1 {
-    font-size: 36px;
+    font-size: 50px;
+    font-family: 'Gill Sans';
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
+    font-family: 'Gill Sans';
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 35px;
+    font-family: 'Gill Sans';
+}
+
+h4 {
+    font-size: 23px;
+    font-family: 'Palatino';
 }
 
 p {
-    font-size: 18px;
+    font-size: 22px;
+    font-family: 'Poppins';
 }
-/* --------------- 2 - COLUMN WIDE LAYOUT --------------- */
-/* - BASE - */
+
+/* --------------- BASE ELEMENTS --------------- */
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    color: var(--ebony-clay);
+    font-family: 'Courier New', Courier, 'Palatino', 'Poppins', 'Gill Sans';
+    font-size: 14px;
+    overflow-x: hidden;
     margin: auto;
     padding: auto;
-    position: relative;
-    flex-flow: column;
-    justify-content: center;
-    line-height: 1.7;
-    font-size: 14px;
-    color: var(--ebony-clay);
-    overflow-x: hidden;
 }
 
 img {
@@ -49,225 +52,377 @@ img {
 }
 
 section {
-    display: block;
-    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 25px;
     position: relative;
     overflow: hidden;
     margin-top: 50px;
+    text-align: left;
 }
 
-/* centers all the content in the middle of the page */
-/* sets max-width of the page to 1024px */
-.wrap {
-    width: 90%;
-    margin: 0 auto;
-    align-content: center;
-    flex-direction: column;
-}
-
-header {
-    position: fixed;
-    float: left;
-    text-align: center;
-    text-decoration: none;
-}
-
-/* -     HEADER - TOP      - */
-/* .header-top {
-    display: none;
-    position: fixed;
-    top: 0;
+.site-wrapper {
+    width: 1170px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
-    width: 995px;
-    height: 80px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: var(--spindle);
 }
 
-.header-top .logo {
+/* --------------- HEADER - TOP --------------- */
+/* - will appear only when max-width is 800px - */
+header.top {
+    display: none;        
+}
+
+figure {
     display: none;
 }
 
-.header-top .site-title {
-    display: none;
-}
-
-.header-top nav {
-    display: none;
-} */
-
-/* --- ------------------ --- */
-/* -     HEADER - LEFT      - */
-/* --- ------------------ --- */
-header {
-    display: flex;
-    flex-direction: column;
-    top: 100px;
-    width: 280px;
-    height: 800px;
+/* --------------- HEADER - LEFT --------------- */
+header.left {
+    color: var(--cadillac);
+    background: var(--spindle);
+    border-radius: 25px;  
+    box-shadow: var(--shadow-cadillac);
+    min-height: 620px;
+    max-height: 620px;   
+    top: 50px;
+    overflow: hidden;
     position: fixed;
-    float: left;
-    border-radius: 25px;
-    background-color: var(--spindle);
+    width: 265px;         
 }
 
-.logo img {
-    margin-top: 20px;
-    max-height: 250px;
-    max-width: 250px;
-    border-radius: 100%;
+header.left .head-margin {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
 }
 
-.site-title {
+header.left .head-inside {
+    overflow: hidden;
+    width: 100%; 
+}
+
+/* - sets the flex properties of the sidebar contents - */
+header.left .head-inside > .head-container {
+    margin-right: 0;
+    min-height: 99.91%;
+    text-align: center;
+    
+}
+
+header.left nav {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+header.left a {
+    color: var(--cadillac);
+}
+
+/* --- AVATAR + NAME --- */
+header.left .my-photo {
+   border-radius: 100%;
+   padding: 5px; 
+}
+
+header.left .my-name {
+    text-decoration: none;
+    padding: 5px;
     font-size: 28px;
     font-weight: 700;
-    text-decoration: none;
-    color: var(--cadillac);
 }
 
-.nav-menu {
-    justify-content: stretch;
-    width: 250px;
-    line-height: 1;
-    margin-top: 10px;
-}
-
-.nav-link {
-    text-decoration: none;
-    text-transform: lowercase;
-    font-size: 20px;
-    color: var(--cadillac);
-}
-
-.nav-link:hover {
-    margin-left: 10px;
-    color: var(--beeswax);
-}
-
-/* -- SOCIAL ICONS -- */
-.social-icons li {
-    display: inline;
-    position: relative;
-    top: 50px;
-    font-size: 20px;
-}
-
-.social-icons li a {
-    color: var(--cadillac);
-    bottom: 50px;
-    padding: 7px;
-    line-height: 32px;
+header.left .my-title {
+    line-height: 1.2;
+    font-size: 14px;
     text-align: center;
-    text-decoration: none;
-    flex-direction: row;
+    color: var(--ebony-clay);
 }
 
-.social-icons li a:hover {
-    color: var(--beeswax);
-    font-size: 25px;
+/* --- NAVIGATION MENU --- */
+header.left .menu-left {
+    font-size: 14px;
+    font-family: 'Palatino', 'Gill Sans';
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header.left .menu-left li {
+    line-height: 2.5;
+}
+
+header.left .menu-left i {
+    margin-right: 20px;
+}
+
+header.left .menu-left li a {
+    margin-left: 0;
+    padding: 0;
+    font-size: 18px;       /* sets icons and label size */
+    text-decoration: none; /* removes underline */
+    transition: all 0.3s ease-in-out;
+}
+
+/* - makes the navigation menu interactive when the mouse hovers on a list item - */
+header.left .menu-left li a:hover {
+    margin-left: 20px;
+    color: var(--japanese-laurel);
+}
+
+header.left .copyright {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/*  --------------- SOCIAL ICONS ELEMENTS --------------- */
+.list-horizontal li {
+    display: inline-flex;  /* sets the social icons list to display horizontally */
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.socials-list li i {
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.socials-list li a {
+    color: var(--cadillac);
+    background: #fff;
+    border-radius: 100%;
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center; 
+}
+
+.socials-list li a:hover {
+    color: #fff;
+    background-color: var(--japanese-laurel);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-ebonyclay);
+}
+
+/* - footer - copyright - */
+.copyright {
+    color: var(--ebony-clay);
+    font-weight: 200;
+}
+
+/* --------------- MAIN CONTENT --------------- */
+main {
+   display: flex;
+   flex-direction: column;
+}
+
+main.content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-height: fit-content;
+    width: 875px;
+    float: right;
+    transition: all 0.3s ease-in-out;
+}
+
+section.box-spindle {
+    background: var(--spindle);
+    box-shadow: var(--shadow-cadillac);
+    display: block;
+}
+
+.section-title {
+    margin: 0;
+    
+}
+
+/* - hero properties - */
+.hero {
+    height: 620px;
+    margin-top: 0;
+    background: var(--lightorchid-pipi);
+    box-shadow: var(--shadow-cadillac);
+    color: var(--ebony-clay);
+}
+
+/* - sets properties inside sections - */
+.section-container {
+    margin: auto;
+    padding: 50px;
+    color: var(--ebony-clay);
+    text-align: left;
+}
+
+.section-container h1 {
+    color:var(--ebony-clay);
+    line-height: 1;
+    padding-bottom: 50px;
+}
+
+.section-container p {
+    line-height: 1.7;
+}
+
+.section-title {
+    color: var(--cadillac);
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+
+/* - adds that bar underneath the section titles - */
+.box-spindle .section-title::after {
+    content:"";
+    background: var(--japanese-laurel);
+    border-radius: 50px;
+    display: flex;
+    height: 5px;
+    margin-top: 14px;
+    width: 30px;
+}
+
+.box-spindle h2, h4{
+    padding-bottom: 40px;
+}
+
+.box-spindle .product-card {
+    border-style: inset dotted dotted inset;
+    border-color: var(--cadillac);
+    margin: 20px;
+    padding: 25px;
+}
+
+.box-spindle .product-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.box-spindle .product-card-2 {
+    border-style: inset dotted dotted inset;
+    border-color: var(--cadillac);
+    margin: 20px;
+    padding: 25px;
+    width: 44.8%;
+    min-height: 10%;
+}
+
+/* - adds padding for each article line within the sections - */
+section article {
+    padding: 15px;
+}
+
+/* --------------- CONTACT SECTION --------------- */
+.contact-info {
+    display: flex
+}
+
+.contact-info i {
+    padding: 20px ;
+    font-size: 50px;
+    color: var(--cadillac);
+}
+
+.contact-info i:hover {
+    color: var(--japanese-laurel);
+}
+.contact-content {
+    padding: 10px;
+}
+
+.contact-content h4, p {
     padding: 0;
 }
 
+/* --------------- MEDIA QUERY + TOP NAV BAR --------------- */
+@media all and (max-width: 800px) {
+    .site-wrapper {
+        width: 800px;
+    }
 
-/* --- ---------- --- */
-/* -      HERO      - */
-/* --- ---------- --- */
-main {
-    top: 100px;
-    margin-left: 290px;
-    padding: auto;
-    position: relative;
-    flex-direction: column;
-    max-height: fit-content;
-}
-
-.card {
-    width: 100%;
-    margin-top: auto;
-    background-color: var(--cadillac);
-    opacity: 0.9;
-}
-
-.hero {
-    color: var(--spindle);
-    margin-top: 75px;
-    margin-left: 15px;
-    margin-bottom: 75px;
-    margin-right: auto;
-    position: relative;
-    order: 1
-}
-
-.hero h1 {
-    color: var(--spindle);
-    font-size: 60px;
-    line-height: 0.7;
-    display: flex;
-}
-
-.hero p {
-    margin-top: 5%;
-    line-height: 1.8;
-    display: flex;
-}
-
-.row-pers-info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    position: relative;
-}
-
-.col-info {
-    column-gap: 25px;
-    margin: auto;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#c-info-1 {
-    order: 1;
-}
-
-#c-info-2 {
-    order: 2;
-}
-.info-title {
-    color: var(--ebony-clay);
-    padding-right: 10px;
-}
-
-/* --- ------------------ --- */
-/* -     RESPONSIVENESS     - */
-/* --- ------------------ --- */
-@media (max-width: 768px) {
-    .header .site-title {
+    header.left {
         display: none;
-    }    
-    .header {
-        width: 80px;
-        height: 550px;
+        transition: all 0.1s ease-out;
     }
-    .header .logo img {
-        margin-top: 50px;
-        width: 65px;
-        height: 70px;
-        transition: 0.3s ease-in-out;
+    
+    header.top {
+        display: block;
+        position: fixed;
+        height: 80px;
+        width: 85%;
+        top: 50px;
+        bottom: 50px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        border-radius: 25px;
+        background: var(--cadillac);
+        box-shadow: var(--shadow-ebonyclay);
+        color: var(--ebony-clay);
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
     }
-    .nav-menu .nav-title {
-        display: none;
+
+    header.top .top-margin {
+        width: 85%;
+        height: 75px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
-    .nav-icons .nav-link:hover {
-        margin-left: 10px;
-        color: var(--beeswax);
+    
+    header.top .top-inside {
+        overflow: hidden;
+        width: 100%;
     }
-    .social-icons {
-        display: none;
+
+    header.top nav {
+        width: 100%;
+        justify-content: space-around;
+        margin-left: 30px;
+    }
+
+    header.top a {
+        /* margin-left: 20px; */
+        color: var(--ebony-clay);
+        font-size: 50px;
+        padding: 20px;
+        padding-bottom: 5px;
+    }
+
+    .menu-top li {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 1px;
+        padding: 10px;
+    }
+
+    .site-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 768px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    main.content {
+        position: relative;
+        top: 125px;
+        width: 85%;
+    }
+
+    .box-spindle .product-card-2 {
+        border-style: inset dotted dotted inset;
+        border-color: var(--cadillac);
+        margin: 20px;
+        padding: 25px;
+        width: 93%;
+        min-height: 10%;
     }
 }

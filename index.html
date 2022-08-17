@@ -7,136 +7,283 @@
     <script src="https://kit.fontawesome.com/73525b73cb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title>My Advanced CSS: Portfolio</title>
+    <title>Claire's Portfolio</title>
 </head>
 
 <body>
-    <div class="wrap">
-        <!-- - - HEADER - - -->
-        <header>
-            <div class="site-logo"
-                <!-- - - AVATAR + NAME - - -->   
-                <a href="index.html" class="logo">
-                    <img src="./assets/images/its_me.jpg" alt="an icon photo of Clarence Go">
-                </a>
-                <a href="index.html" class="site-title">
-                    Clarence Go
-                </a>
-            </div>
-            <!-- NAVIGATION BAR  -->
-            <nav class="nav-menu">
-                <ul class="nav-icons">
-                    <a href="#home" class="nav-link">
-                        <i class="fa-solid fa-house"></i>
-                        <p class="nav-title">Home</p>
-                    </a>
-                    <br>
-                    <a href="#aboutme" class="nav-link">
-                        <i class="fa-solid fa-user"></i>
-                        <p class="nav-title">About Me</p>
-                    </a>
-                    <br>
-                    <a href="#skills" class="nav-link">
-                        <i class="fa-solid fa-pencil"></i>
-                        <p class="nav-title">My Skills</p>
-                    </a>
-                    <br>
-                    <a href="#myworks" class="nav-link">
-                        <i class="fa-solid fa-folder"></i>
-                        <p class="nav-title">My Works</p>
-                    </a>
-                    <br>
-                    <a href="#gallery" class="nav-link">
-                        <i class="fa-solid fa-images"></i>
-                        <p class="nav-title">My Gallery</p>
-                    </a>
-                    <br>
-                    <a href="#contact" class="nav-link">
-                        <i class="fa-solid fa-address-card"></i>
-                        <p class="nav-title">Contact Me</p>
-                    </a>
-                </ul>
-            </nav>
-            <div class="social-icons">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-twitch"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <!-- - - MAIN CONTENT - - -->
-        <main>
-            <!-- HOME + ABOUT ME -->
-            <section class="card">
-                <div id="aboutme" class="hero">
-                    <h1>
-                        Hello there,
-                    </h1>
-                    <p>
-                        I am Claire! 
-                        I am 24 years old studying nursing and web development. 
-                        I have minimal experience in web design and development, but I have experience in doing graphic arts commisions and customizations.
-                    </p>
-                    <br>
-                    <!-- COLUMNS AT THE BOTTOM -->
-                    <div class="row-pers-info">
-                        <div class="col-info" id="c-info-1">
-                            <p>
-                                <span class="info-title">Name:</span>
-                                Clarence Marie Go
-                            </p>
-                            <p>
-                                <span class="info-title">Birthday:</span>
-                                September 23, 1997
-                            </p>
-                        </div>
-                        <div class="col-info" id="c-info-2">
-                            <p>
-                                <span class="info-title">Location:</span>
-                                New Jersey, USA
-                            </p>
-                            <p>
-                                <span class="info-title">Email:</span>
-                                puppy@lukabear.com
-                            </p>
+    <div class="site-wrapper">
+        <!-- HEADER (LEFT) -->
+            <header class="left">
+                <div class="head-margin">
+                    <div class="head-inside">
+                        <div class="head-container">
+                            <a href="index.html">
+                                <img src="./assets/images/its_me.jpg" alt="a selfie photo of the designer of this webpage" class="my-photo">
+                            </a>
+                            <a href="index.html" class="my-name">Clarence Go</a>
+                            <span class="my-title">web developer student | artist | designer |</span>
+                            <!-- NAVIGATION MENU -->
+                            <nav>
+                                <ul class="menu-left">
+                                    <li>
+                                        <a href="#home" class="nav-link">
+                                            <i class="fa-solid fa-house"></i>
+                                            Home
+                                        </a> 
+                                    </li>
+                                    <li>
+                                        <a href="#about" class="nav-link">
+                                            <i class="fa-solid fa-user"></i>
+                                            About Me
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#projects" class="nav-link">
+                                            <i class="fa-solid fa-folder"></i>
+                                            My Projects
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact" class="nav-link">
+                                            <i class="fa-solid fa-address-card"></i>
+                                            Contact Me
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- FOOTER -->
+                            <footer class="footer">
+                                <!-- SOCIAL ICONS -->
+                                <div class="list-horizontal">
+                                    <ul class="socials-list">
+                                        <li class="social-icons">
+                                            <a href="https://github.com/cmariego97">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-icons">
+                                            <a href="https://instagram.com/cme.gogogo">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-icons">
+                                            <a href="#">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a> 
+                                        </li class="social-icons">
+                                        <li>
+                                            <a href="https://twitter.com/jaded_vp">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social-icons">
+                                            <a href="https://twitch.tv/jadedlabyrinth">
+                                                <i class="fa-brands fa-twitch"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- COPYRIGHT -->
+                                <span class="copyright">© made by claire ~ 2022</span>
+                            </footer>  <!--end of container-->
                         </div>
                     </div>
                 </div>
-                <div class="overlay"></div>
-            </section>
-            <!-- MY SKILLS -->
-            <!-- MY WORKS -->
-            <!-- MY GALLERY -->
-            <!-- CONTACT ME -->
-        </main>
+            </header>
+
+        <div class="site-container">
+            <!-- HEADER (TOP) -->
+            <header class="top">
+                <div class="top-margin">
+                    <div class="top-inside">
+                        <div class="top-container">
+
+                            <!-- NAVIGATION MENU - ICONS ONLY - HORIZONTAL -->
+                            <nav>
+                                <ul class="menu-top">
+                                    <li>
+                                        <a href="#home" class="nav-link">
+                                            <i class="fa-solid fa-house"></i> 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#about" class="nav-link">
+                                            <i class="fa-solid fa-user"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#projects" class="nav-link">
+                                            <i class="fa-solid fa-folder"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact" class="nav-link">
+                                            <i class="fa-solid fa-address-card"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- MAIN CONTENT AREA -->
+            <main class="content">
+
+                <!-- section hero -->
+                <section class="hero" id="home">
+                    <div class="section-container">
+                        <h1>
+                            My Advanced CSS Portfolio
+                        </h1>
+                        <p>
+                            This is my homepage. I have nothing to write here yet, but welcome to my Advance CSS Portfolio Project!!
+                        </p>
+                    </div>
+                    <div class="overlay"></div>
+                </section> 
+
+                <!-- section - about me -->
+                <section id="about" class="box-spindle">
+                    <div class="section-container">
+                        <h3 class="section-title">
+                            About Me
+                        </h3>
+                        <!-- <div class="spacer" data-height="80" stle="height: 80px;"></div> -->
+                        <h2>
+                            Hello,
+                        </h2>
+                        <article>
+                            <p>
+                                My name is Clarence, you may call me Claire. I'm 24 years old. 
+                                I'm an aspiring web developer/designer.
+                            </p>
+                        </article>
+                        <article>
+                            <p>
+                                Besides web development, I am also studying nursing while also working as a Nurse Technician at an ICU.
+                            </p>
+                        </article>
+                        <article>
+                            <p>
+                                In my free time, I enjoy drawing, watching movies, and playing video games. 
+                            </p>
+                        </article>
+                        <article>
+                            <p>
+                                My goal for this class is to learn how to properly build and develop a website and hopefully find myself in a different career path or a new side hustle :)
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- section - my projects -->
+                <section id="projects" class="box-spindle">
+                    <div class="section-container">
+                            <h3 class="section-title">
+                                My Projects
+                            </h3>
+                            <div class="product-card">
+                                <h4>
+                                    Horiseon Refactor Web App
+                                </h4>
+                                <a href="https://cmariego97.github.io/1.1-HTML-CSS-SEO_refractor/">
+                                    <img src="./assets/images/deer.jpeg" alt="an artistic graphic mosaic image of a deer" />
+                                </a>
+                                <article>
+                                    <p>
+                                        The photo has nothing to do with the project it just looks cool.
+                                    </p>
+                                </article>
+                                <article>
+                                    <p> 
+                                        This was the first HTML refactor project I did for the Coding Bootcamp class. I compiled the CSS and added semantic elements to an already existing code.
+                                    </p>
+                                </article>
+                            </div>
+                            <div class="product-container">  
+                                <div class="product-card-2">
+                                    <h4>
+                                        Coding Bootcamp Study Guide
+                                    </h4>
+                                    <a href="https://cmariego97.github.io/prework-study-guide/">
+                                        <img src="./assets/images/idontfeelsogoodmrstark.webp" alt="it's a graphic image of a girl being pixelated away like spider-man in infinty wars" />
+                                    </a>
+                                    <article>
+                                        <p>
+                                            This is the web application that I made before the Coding Bootcamp began. It's giving early 2000's website.
+                                        </p>
+                                    </article>
+                                </div>
+                                <div class="product-card-2">
+                                    <h4>
+                                        Upcoming Project ...
+                                    </h4>
+                                    <a href="#">
+                                        <img src="./assets/images/WIP.jpg" alt="work in progress logo">
+                                    </a>
+                                    <p>
+                                        This project is still in progress...hopefully more to come soon!
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+                
+                <!-- section - contact me -->
+                <section id="contact" class="box-spindle">
+                    <div class="section-container">
+                        <h3 class="section-title">
+                            Send Me a Message :)
+                        </h3>
+                        <div class="">
+                            <div class="contact-info">
+                                <i class="fa-solid fa-phone"></i> 
+                                <div class="contact-content">
+                                    <h4>
+                                        Phone
+                                    </h4>
+                                    <p>
+                                        +1 (012) 345-6789
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <div class="contact-content">
+                                    <h4>
+                                        Email
+                                    </h4>
+                                    <p>
+                                        cmarie.go97@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                                <div class="contact-content">
+                                    <h4>Location</h4>
+                                    <p>
+                                        somewhere with lots of food & internet
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <i class="fa-solid fa-dog"></i>
+                                <div class="contact-content">
+                                    <h4>
+                                        Luka
+                                    </h4>
+                                    <p>
+                                        is my dog's name
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 </body>
 </html>
